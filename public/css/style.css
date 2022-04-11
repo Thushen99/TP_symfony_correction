@@ -1,0 +1,35 @@
+.container{
+    width: 100%;
+}
+
+td, th, a{
+    text-align: center;
+}
+
+table, td, tr, th{
+    border: solid 1px gray;
+}
+
+.bouton {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+.bouton a{
+    text-align: center;
+    background-color: green;
+    border-radius: 20px;
+    padding: 1% 1%;
+    text-decoration: none;
+}
+
+.form{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.label{
+    color: grey;
+}

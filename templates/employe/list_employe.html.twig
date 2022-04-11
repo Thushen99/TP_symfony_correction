@@ -1,0 +1,62 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+	<div>
+
+
+		<table class="container">
+
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>Prénom</th>
+					<th>Nom</th>
+					<th>Téléphone</th>
+					<th>Email</th>
+					<th>Adresse</th>
+					<th>Salaire</th>
+					<th>Date de naissance</th>
+					<th>Option</th>
+				</tr>
+			</thead>
+
+			<tbody>
+
+				{% for employe in employes %}
+					<tr>
+						<td>
+							<a href="{{ path('show_employe', {'id' : employe.id } ) }}">{{ employe.id }}</a>
+						</td>
+						<td>{{ employe.prenom }}</td>
+						<td>{{ employe.nom }}</td>
+						<td>{{ employe.telephone }}</td>
+						<td>{{ employe.email }}</td>
+						<td>{{ employe.adresse}}</td>
+						<td>{{ employe.salaire }}</td>
+						<td>{{ employe.datedenaissance | date('d-m-Y') }}</td>
+						<td>
+							<a href="{{ path('update_employe', {'id' : employe.id } ) }}">
+								<i class="fa-solid fa-pen"></i>
+							</a>
+							<a href="{{ path('delete_employe', {'id' : employe.id } ) }}">
+								<i class="fa-solid fa-trash-can"></i>
+							</a>
+						</td>
+					</tr>
+				{% endfor %}
+
+			</tbody>
+
+		</table>
+
+		<div class="bouton">
+
+			<a href="{{ path('create_employe') }}">Ajouter un client</a>
+
+		</div>
+
+
+	</div>
+
+{% endblock %}

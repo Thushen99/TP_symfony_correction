@@ -1,0 +1,89 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+	{{form_start(employeForm)}}
+
+	<div class="form">
+
+		<div class="champ">
+			{{form_label(employeForm.nom, 'Nom :', {'label_attr' : {'class' : 'label'} } ) }}
+			{{form_widget(employeForm.nom, {'attr' : {'class' : 'input', 'placeholder' : 'Nom'} } ) }}
+		</div>
+		<div class="champ">
+			{{form_label(employeForm.prenom, 'Prenom :', {'label_attr' : {'class' : 'label'} } ) }}
+			{{form_widget(employeForm.prenom, {'attr' : {'class' : 'input', 'placeholder' : 'Prenom'} } ) }}
+		</div>
+		<div class="champ">
+			{{form_label(employeForm.telephone, 'Téléphone :', {'label_attr' : {'class' : 'label'} } ) }}
+			{{form_widget(employeForm.telephone, {'attr' : {'class' : 'input', 'placeholder' : 'Téléphone'} } ) }}
+		</div>
+		<div class="champ">
+			{{form_label(employeForm.email, 'Email :', {'label_attr' : {'class' : 'label'} } ) }}
+			{{form_widget(employeForm.email, {'attr' : {'class' : 'input', 'placeholder' : 'Email'} } ) }}
+		</div>
+
+	</div>
+
+	<div class="form">
+
+		<div class="champ">
+			{{form_label(employeForm.adresse, 'Adresse :', {'label_attr' : {'class' : 'label'} } ) }}
+			{{form_widget(employeForm.adresse, {'attr' : {'class' : 'input', 'placeholder' : 'Adresse'} } ) }}
+		</div>
+		<div class="champ">
+			{{form_label(employeForm.poste, 'Poste :', {'label_attr' : {'class' : 'label'} } ) }}
+			{{form_widget(employeForm.poste, {'attr' : {'class' : 'input', 'placeholder' : 'Poste'} } ) }}
+		</div>
+		<div class="champ">
+			{{form_label(employeForm.salaire, 'Salaire :', {'label_attr' : {'class' : 'label'} } ) }}
+			{{form_widget(employeForm.salaire, {'attr' : {'class' : 'input', 'placeholder' : 'Salaire'} } ) }}
+		</div>
+		<div class="champ">
+			{{form_label(employeForm.datedenaissance, 'Date de naissance :', {'label_attr' : {'class' : 'label'} } ) }}
+			{{form_widget(employeForm.datedenaissance, {'attr' : {'class' : 'input', 'placeholder' : 'Date de naissance'} } ) }}
+		</div>
+
+	</div>
+
+
+	<div class="form-button">
+		{{form_widget(employeForm.Enregistrer, {'attr' : {'class' : 'button'} } ) }}
+	</div>
+
+
+	{{form_end(employeForm)}}
+
+	<style>
+		.form {
+			margin: 1% 0;
+			display: flex;
+			justify-content: space-between;
+		}
+		.label {
+			width: 50%;
+			background-color: Gainsboro;
+			padding: 1%;
+			border-radius: 5px;
+			text-align: center
+		}
+		.input {
+			width: 50%;
+		}
+		.champ {
+			width: 20%;
+			display: flex;
+			justify-content: center;
+		}
+		.form-button {
+			display: flex;
+			justify-content: center;
+		}
+		.button {
+			background-color: LimeGreen;
+			border: solid LimeGreen 1px;
+			border-radius: 5px;
+		}
+	</style>
+
+{% endblock %}

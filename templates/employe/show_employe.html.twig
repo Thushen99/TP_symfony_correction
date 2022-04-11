@@ -1,0 +1,89 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+	<div>
+
+		<table class="container">
+
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>Prénom</th>
+					<th>Nom</th>
+					<th>Téléphone</th>
+					<th>Email</th>
+					<th>Adresse</th>
+					<th>Salaire</th>
+					<th>Date de naissance</th>
+					<th>Poste</th>
+				</tr>
+			</thead>
+
+			<tbody>
+
+				<tr>
+					<td>{{ employe.id }}</td>
+					<td>{{ employe.prenom }}</td>
+					<td>{{ employe.nom }}</td>
+					<td>{{ employe.telephone }}</td>
+					<td>{{ employe.email }}</td>
+					<td>{{ employe.adresse}}</td>
+					<td>{{ employe.salaire }}</td>
+					<td>{{ employe.datedenaissance | date('d-m-Y') }}</td>
+					<td>
+						{{ employe.poste }}
+					</td>
+				</tr>
+
+			</tbody>
+
+		</table>
+
+	</div>
+
+	<style>
+
+		.container {
+			width: 100%;
+		}
+
+		td,
+		th,
+		a {
+			text-align: center;
+		}
+
+		table,
+		td,
+		tr,
+		th {
+			border: solid 1px gray;
+		}
+
+		.bouton {
+			display: flex;
+			justify-content: center;
+			margin-top: 2%;
+		}
+
+		.bouton a {
+			text-align: center;
+			background-color: green;
+			border-radius: 20px;
+			padding: 1%;
+			text-decoration: none;
+		}
+
+		.form {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.label {
+			color: grey;
+		}
+	</style>
+
+{% endblock %}
